@@ -45,7 +45,7 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     'structure': 'caasaa',
     'process': 'adeemsa',
     'method': 'mala',
-    'result': 'bu\'uura',
+    'result': 'bu\'aa',
     'equation': 'walqixxummaa',
     'formula': 'foormulaa',
     'calculation': 'herregaa',
@@ -82,7 +82,7 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     'society': 'hawaasa',
     'community': 'hawaasummaa',
     'culture': 'aadaa',
-    'tradition': 'aadaa',
+    'tradition': 'duudhaa',
     'history': 'seenaa',
     'ancient': 'durii',
     'modern': 'ammayyaa',
@@ -99,8 +99,8 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     'peace': 'nagaa',
     'independence': 'walabummaa',
     'colonial': 'koloneeffamuu',
-    'resistance': 'mormii',
-    'battle': 'waraana',
+    'resistance': 'falmii',
+    'battle': 'lolaa',
     'victory': 'mo\'annaa',
     'defeat': 'moofamuu'
   };
