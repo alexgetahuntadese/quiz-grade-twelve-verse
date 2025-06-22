@@ -99,7 +99,6 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     'peace': 'nagaa',
     'independence': 'walabummaa',
     'colonial': 'koloneeffamuu',
-    'resistance': 'falmii',
     'battle': 'lolaa',
     'victory': 'mo\'annaa',
     'defeat': 'moofamuu'
