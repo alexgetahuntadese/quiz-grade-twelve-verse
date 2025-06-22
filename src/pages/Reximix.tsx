@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -253,8 +252,7 @@ const Reximix = () => {
         <div className="flex items-center justify-between mb-6">
           <Button 
             variant="outline" 
-            onClick={() =
-            resetQuiz()}
+            onClick={() => resetQuiz()}
             className="flex items-center gap-2"
           >
             <ArrowLeft className="w-4 h-4" />
