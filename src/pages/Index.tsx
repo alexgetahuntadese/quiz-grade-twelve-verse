@@ -2,8 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
-import { Star, Award, BookOpen, Users, TrendingUp } from 'lucide-react';
-// import ChatGPT from '@/components/ChatGPT';
+import { Star, Award, BookOpen, Users, TrendingUp, Shuffle } from 'lucide-react';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -76,16 +75,44 @@ const Index = () => {
           </div>
         </div>
 
-        {/* ChatGPT Section - Temporarily removed to fix an error */}
-        {/*
+        {/* Reximix Challenge Section */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">AI Study Assistant</h2>
-            <p className="text-lg text-gray-600">Get help with your studies using ChatGPT</p>
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Special Challenge</h2>
+            <p className="text-lg text-gray-600">Ready for the ultimate test? Try our mixed quiz challenge!</p>
           </div>
-          <ChatGPT />
+          
+          <Card className="max-w-2xl mx-auto group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-0 bg-gradient-to-r from-purple-500 to-indigo-500 text-white overflow-hidden"
+                onClick={() => navigate('/reximix')}>
+            <CardHeader className="text-center pb-4">
+              <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                <Shuffle className="w-10 h-10 text-white" />
+              </div>
+              <CardTitle className="text-2xl font-bold text-white">Reximix Challenge</CardTitle>
+              <CardDescription className="text-purple-100 text-base leading-relaxed">
+                Mixed questions from all subjects - the ultimate knowledge test
+              </CardDescription>
+            </CardHeader>
+            
+            <CardContent className="space-y-4">
+              <div className="flex items-center justify-center">
+                <div className="bg-white/20 rounded-full px-4 py-2">
+                  <span className="text-sm font-medium text-white">20 Random Questions</span>
+                </div>
+              </div>
+              
+              <Button 
+                className="w-full bg-white text-purple-600 hover:bg-purple-50 font-medium py-3 rounded-lg transition-all duration-300 group-hover:scale-105"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigate('/reximix');
+                }}
+              >
+                Start Challenge
+              </Button>
+            </CardContent>
+          </Card>
         </div>
-        */}
 
         {/* Grades Section */}
         <div className="mb-16">
