@@ -9,6 +9,8 @@ import Index from "./pages/Index";
 import Grade10 from "./pages/Grade10";
 import Grade11 from "./pages/Grade11";
 import Grade12 from "./pages/Grade12";
+import Grade12Subject from "./pages/Grade12Subject";
+import Grade12Quiz from "./pages/Grade12Quiz";
 import Quiz from "./pages/Quiz";
 import Reximix from "./pages/Reximix";
 
@@ -25,6 +27,8 @@ const App: React.FC = () => (
           <Route path="/grade-10" element={<Grade10 />} />
           <Route path="/grade-11" element={<Grade11 />} />
           <Route path="/grade-12" element={<Grade12 />} />
+          <Route path="/grade12/:subject" element={<Grade12Subject />} />
+          <Route path="/grade12/:subject/:chapter/:difficulty" element={<Grade12Quiz />} />
           <Route path="/quiz/:chapterId" element={<Quiz />} />
           <Route path="/reximix" element={<Reximix />} />
         </Routes>
