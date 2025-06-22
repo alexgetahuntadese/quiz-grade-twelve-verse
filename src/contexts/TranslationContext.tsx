@@ -42,6 +42,8 @@ const translations = {
     biology: 'Biology',
     english: 'English',
     history: 'Ethiopian History',
+    informationTechnology: 'Information Technology',
+    civics: 'Civics and Ethical Education',
     
     // Subject descriptions
     mathematicsDesc: 'Functions, Calculus & Analytic Geometry',
@@ -50,6 +52,8 @@ const translations = {
     biologyDesc: 'Cell Biology, Genetics & Physiology',
     englishDesc: 'Grammar, Literature & Vocabulary',
     historyDesc: 'Ancient, Medieval & Modern Ethiopia',
+    informationTechnologyDesc: 'Database, Web Development & Programming',
+    civicsDesc: 'Democracy, Rights & Justice',
     
     // Navigation
     back: 'Back',
@@ -92,7 +96,19 @@ const translations = {
     
     // Language selector
     language: 'Language',
-    changeLanguage: 'Change Language'
+    changeLanguage: 'Change Language',
+    
+    // Common explanation terms
+    because: 'because',
+    therefore: 'therefore',
+    since: 'since',
+    forExample: 'for example',
+    inOtherWords: 'in other words',
+    thisIs: 'this is',
+    meaning: 'meaning',
+    refers: 'refers to',
+    involves: 'involves',
+    means: 'means'
   },
   om: {
     // Header
@@ -116,6 +132,8 @@ const translations = {
     biology: 'Bayolojii',
     english: 'Afaan Ingilizii',
     history: 'Seenaa Itoophiyaa',
+    informationTechnology: 'Teeknooloojii Odeeffannoo',
+    civics: 'Barnoota Lammiitootaa fi Naamusaa',
     
     // Subject descriptions
     mathematicsDesc: 'Dalagaa, Shallaggii fi Joomeetrii Xiinxalaa',
@@ -124,6 +142,8 @@ const translations = {
     biologyDesc: 'Bayolojii Seelii, Jenetikisii fi Fayyoolojii',
     englishDesc: 'Caasluga, Ogbarruu fi Jecha',
     historyDesc: 'Seenaa Itoophiyaa Durii, Gidduu fi Ammayyaa',
+    informationTechnologyDesc: 'Kuusdeetaa, Weeb Hojjechuu fi Sagantaa',
+    civicsDesc: 'Dimokiraasii, Mirga fi Haqaa',
     
     // Navigation
     back: 'Deebi\'i',
@@ -166,7 +186,19 @@ const translations = {
     
     // Language selector
     language: 'Afaan',
-    changeLanguage: 'Afaan Jijjiiri'
+    changeLanguage: 'Afaan Jijjiiri',
+    
+    // Common explanation terms
+    because: 'sababni isaas',
+    therefore: 'kanaafuu',
+    since: 'waan ta\'eef',
+    forExample: 'fakkeenyaaf',
+    inOtherWords: 'jecha biraatiin',
+    thisIs: 'kun',
+    meaning: 'jechuun',
+    refers: 'gara agarsiisa',
+    involves: 'of keessatti qabata',
+    means: 'jechuudha'
   }
 };
 

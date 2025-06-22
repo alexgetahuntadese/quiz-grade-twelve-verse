@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -6,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { ArrowLeft, Clock, CheckCircle, XCircle, BookOpen } from 'lucide-react';
 import { getQuestionsForQuiz, getChaptersBySubject } from '@/data/questions';
 import { useTranslation } from '@/contexts/TranslationContext';
+import { translateExplanation } from '@/utils/translationUtils';
 import LanguageSelector from '@/components/LanguageSelector';
 
 interface QuizInterfaceProps {
@@ -17,7 +19,7 @@ interface QuizInterfaceProps {
 }
 
 const QuizInterface = ({ subject, chapterId, difficulty, onComplete, onBack }: QuizInterfaceProps) => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
@@ -110,6 +112,11 @@ const QuizInterface = ({ subject, chapterId, difficulty, onComplete, onBack }: Q
     );
   }
 
+  // Translate the explanation based on selected language
+  const translatedExplanation = currentQuestion.explanation 
+    ? translateExplanation(currentQuestion.explanation, language)
+    : '';
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
       <div className="container mx-auto max-w-4xl">
@@ -188,10 +195,10 @@ const QuizInterface = ({ subject, chapterId, difficulty, onComplete, onBack }: Q
               })}
             </div>
             
-            {showFeedback && currentQuestion.explanation && (
+            {showFeedback && translatedExplanation && (
               <div className="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
                 <p className="text-sm text-blue-800">
-                  <strong>{t('explanation')}:</strong> {currentQuestion.explanation}
+                  <strong>{t('explanation')}:</strong> {translatedExplanation}
                 </p>
               </div>
             )}
