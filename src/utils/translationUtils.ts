@@ -3,7 +3,7 @@
 export const translateExplanation = (explanation: string, language: 'en' | 'om'): string => {
   if (language === 'en') return explanation;
   
-  // Common physics/science terms translations
+  // Enhanced translations for better Oromo support
   const translations: Record<string, string> = {
     // Basic terms
     'force': 'humna',
@@ -101,10 +101,36 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     'colonial': 'koloneeffamuu',
     'battle': 'lolaa',
     'victory': 'mo\'annaa',
-    'defeat': 'moofamuu'
+    'defeat': 'moofamuu',
+    // Business and trade terms
+    'trade': 'daldalaa',
+    'business': 'daldala',
+    'market': 'gabaa',
+    'price': 'gatii',
+    'cost': 'baasii',
+    'profit': 'bu\'aa',
+    'loss': 'kasaaraa',
+    'income': 'galii',
+    'expense': 'baasii',
+    'investment': 'invastimantii',
+    'customer': 'maamila',
+    'service': 'tajaajila',
+    'product': 'oomisha',
+    'quality': 'qulqullina',
+    'quantity': 'baay\'ina',
+    'supply': 'dhiyeessuu',
+    'demand': 'fedhii',
+    'export': 'erguu',
+    'import': 'galchuu',
+    'domestic': 'biyya keessaa',
+    'foreign': 'biyya alaa',
+    'international': 'idil-addunyaa',
+    'global': 'addunyaa',
+    'local': 'naannoo',
+    'national': 'biyyaalessaa'
   };
 
-  // Simple word replacement (this is a basic implementation)
+  // Simple word replacement
   let translatedText = explanation;
   
   // Replace common English words with Oromo equivalents
@@ -113,7 +139,7 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     translatedText = translatedText.replace(regex, oromo);
   });
 
-  // Replace common phrases
+  // Replace common phrases with better Oromo translations
   translatedText = translatedText
     .replace(/is the/gi, 'kan')
     .replace(/are the/gi, 'kan')
@@ -125,7 +151,29 @@ export const translateExplanation = (explanation: string, language: 'en' | 'om')
     .replace(/in other words/gi, 'jecha biraatiin')
     .replace(/means/gi, 'jechuudha')
     .replace(/refers to/gi, 'gara agarsiisa')
-    .replace(/involves/gi, 'of keessatti qabata');
+    .replace(/involves/gi, 'of keessatti qabata')
+    .replace(/which is/gi, 'kan')
+    .replace(/that is/gi, 'inni')
+    .replace(/such as/gi, 'kan akka')
+    .replace(/including/gi, 'dabalatee')
+    .replace(/especially/gi, 'keessumaa')
+    .replace(/particularly/gi, 'addatti')
+    .replace(/generally/gi, 'haala waliigalaa')
+    .replace(/specifically/gi, 'addaan baasee')
+    .replace(/according to/gi, 'akka')
+    .replace(/based on/gi, 'irratti hundaa\'uun')
+    .replace(/due to/gi, 'sababa')
+    .replace(/as a result/gi, 'kanarraa kan ka\'e')
+    .replace(/however/gi, 'haa ta\'u malee')
+    .replace(/moreover/gi, 'dabalataan')
+    .replace(/furthermore/gi, 'kana malees')
+    .replace(/in addition/gi, 'dabalatee')
+    .replace(/on the other hand/gi, 'gama biraatiin')
+    .replace(/in contrast/gi, 'faallaa kana irratti')
+    .replace(/similarly/gi, 'haaluma wal fakkaataan')
+    .replace(/likewise/gi, 'akkasumas')
+    .replace(/in conclusion/gi, 'xumura irratti')
+    .replace(/finally/gi, 'dhumarratti');
 
   return translatedText;
 };
